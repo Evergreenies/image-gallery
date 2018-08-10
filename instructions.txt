@@ -1,0 +1,11 @@
+This is a demonstrative project where i used Bootstrap 4, Django Framework, MySQL and some other dependencies.
+
+To run this project you have to Install and Set Up Django project. Simulteneously you have need to install which is given below
+
+1) pip install django==2.0
+2) pip install django-bootstrap4
+3) pip install mysqlclient
+
+Here, i also used some CDN's for fontawsome, googlefonts etc.
+
+You have need to to change setting.py file aslo as database name, password, user etc.

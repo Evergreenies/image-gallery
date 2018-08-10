@@ -1,0 +1,52 @@
+{% extends 'gallary1/home.html' %}
+{% load staticfiles %}
+{% load static %}
+
+{% block title %}Manaswi{% endblock %}
+{% block link %}
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="container padding">
+        <div class="row text-center padding">
+            <div class="card-deck">
+                {% for album in object_list %}
+                <div class="col-xs-12 col-sm-6 col-md-4 shadows wer">
+                    <div class="card box shadow">
+                        <main><a href="{% url 'gallary1:nature' %}"><img src="/static/gallary1/images/{{ album.image }}" alt="" class="card-img-top img-fluid cards-size my_image"></a></main>
+                        <hr>
+                        <div class="card-block">
+                            <a href="{% url 'gallary1:nature' %}"><h3 class="card-title">{{ album.name }}</h3></a>
+                            <p class="ellipsis">{{ album.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+     <!-- Model Dialog -->
+    <div class="modal" id="datamodel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Please, Confirm!</h2>
+                    <button type="button" class="close" data-dismiss="modal"><spna>&times;</spna></button>
+                </div>
+                <div class="modal-body">
+                    <p>This feature can be used by admin only.</p>
+                    <p>You just enjoy with images.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

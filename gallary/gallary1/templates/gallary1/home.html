@@ -1,0 +1,145 @@
+{% load staticfiles %}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Manaswi{% endblock %}</title>
+
+    <link rel="shortcut icon" href="http://www.animatedimages.org/data/media/607/animated-rainbow-image-0033.gif">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="{% static 'js/home.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
+    {% block link %}{% endblock %}
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top ">
+        <div class="container-fluid">
+            <a href="{% url 'gallary1:homepage' %}" class="navbar-brand logo"><img src="http://www.animatedimages.org/data/media/607/animated-rainbow-image-0033.gif" class="logo " alt=""> Manaswi </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="" class="nav-link">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="" class="nav-link">Home</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Join Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dynamic Content Area -->
+    {% block body %}
+    {% endblock %}
+
+
+
+
+    <!-- <div class="container padding">
+        <div class="row text-center padding">
+            <div class="col-xs-12 col-sm-6 col-md-3 ">
+                <a href=""><i class="fab fa-facebook display-3"></i></a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+               <a href=""><i class="fab fa-twitter display-3"></i></a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <a href=""><i class="fab fa-google-plus-g display-3"></i></a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <a href=""><i class="fab fa-instagram display-3"></i></a>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- End Of Dynamic Content Area -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <a href="{% url 'gallary1:homepage' %}" class="navbar-brand logo"><img src="http://www.animatedimages.org/data/media/607/animated-rainbow-image-0033.gif" class="logo " alt=""> Manaswi </a>
+                    <hr class="light">
+                    <p>myowner@manaswi.com</p>
+                    <p>India</p>
+                    <p>Maharashtra</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Our Hours</h5>
+                    <hr class="light">
+                    <p>Anytime</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Address</h5>
+                    <hr class="light">
+                    <p>Maharashtra, India</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <h5>&copy; Evergreenies</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- <script>
+        $(document).ready(function(){
+
+            $('.shadows').hover(
+
+                function(){
+                    $(this).animate({
+                        marginTop:"-=1%",
+                    }, 200);
+                },
+
+                function(){
+                    $(this).animate({
+                        marginTop:"0%",
+                    }, 200);
+                }
+            );
+
+        });
+    </script>
+ -->
+
+<!-- <script>
+    $(window).load(function(){
+        alert("loaded");
+    });
+</script>
+ -->
+</body>
+</html>
